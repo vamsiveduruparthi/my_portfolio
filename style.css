@@ -161,3 +161,30 @@ h2 { font-size: 34px; margin-bottom: 20px; }
     color: #fff;
     text-decoration: underline;
 }
+/* Social Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.35s;
+}
+
+.social-icon:hover {
+    background: #444;
+    transform: translateY(-4px);
+}
