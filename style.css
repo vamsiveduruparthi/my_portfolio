@@ -161,30 +161,33 @@ h2 { font-size: 34px; margin-bottom: 20px; }
     color: #fff;
     text-decoration: underline;
 }
-/* Social Icons */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 18px 0;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+  margin-top: 20px;
 }
 
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #111;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.35s;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
 }
 
-.social-icon:hover {
-    background: #444;
-    transform: translateY(-4px);
+.contact-form button {
+  background: #111;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #444;
 }
