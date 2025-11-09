@@ -1,106 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veduruparthi Vamsi Prakash | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Set up Inter font and custom configuration -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#0f172a', /* Slate 900 */
+                        'secondary-bg': '#1e293b', /* Slate 800 */
+                        'accent': '#3b82f6', /* Blue 500 */
+                        'text-light': '#f8fafc', /* Slate 50 */
+                        'text-muted': '#94a3b8', /* Slate 400 */
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-primary-bg text-text-light min-h-screen">
 
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section id="home" class="full">
-    <div class="center">
-        <img src="Picture.jpg" class="profile-pic">
-        <h1>Vamsi Prakash</h1>
-        <h2 class="typing"></h2>
-        <a href="VamsiPrakash_Resume2.pdf" class="btn">Download Resume</a>
-    </div>
-</section>
-
-<section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p>Hi, I'm Veduruparthi VamsiPrakash! A Passionate Student in Computer Science. I'm passionate about using my skills to innovate and contribute to meaningful projects.</p>
-</section>
-
-<section id="skills" class="section fade-in">
-    <h2>Skills</h2>
-    <div class="skills-box">
-        <span>Python with Django& FLASK</span><span>SQL</span><span>AWS(CLoud Computing)</span>
-        <span>Data Science</span><span>Data Analyst</span><span>Java(Basics)</span>
-    </div>
-</section>
-
-<section id="projects" class="section fade-in">
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-        <div class="project-item">
-            <img src="project1.jpg" alt="Project Image">
-            <div class="project-info">
-                <h3>Project Title One</h3>
-                <p>Short description goes here...</p>
-                <a href="#" target="_blank">View Project →</a>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-secondary-bg/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-accent">Vamsi's Portfolio</a>
+                </div>
+                <!-- Nav Links (Visible on larger screens) -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition duration-150">About</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition duration-150">Skills</a>
+                    <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition duration-150">Projects</a>
+                    <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition duration-150">Education</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition duration-150">Contact</a>
+                </div>
             </div>
         </div>
+    </nav>
 
-        <div class="project-item">
-            <img src="project2.jpg" alt="Project Image">
-            <div class="project-info">
-                <h3>Resume Classification </h3>
-                <p>Short description goes here...</p>
-                <a href="https://github.com/vamsiveduruparthi/Resume_Classification" target="_blank">View Project →</a>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="pt-16 pb-12 text-center">
+            <div class="w-32 h-32 mx-auto rounded-full bg-accent/20 flex items-center justify-center mb-6 border-4 border-accent">
+                <!-- Placeholder for profile image -->
+                <svg xmlns="Picture.jpg" class="h-16 w-16 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
             </div>
-        </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-text-light mb-4">
+                Hi, I'm <span class="text-accent">Veduruparthi VamsiPrakash</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-text-muted mb-8">
+                Aspiring Data Analyst & Recent Computer Science Under Graduate
+            </p>
+            <!-- CTA: View my Resume -->
+            <a href="VamsiPrakash_Resume.pdf" class="inline-block bg-accent text-primary-bg font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-600 transition duration-300 transform hover:-translate-y-1">
+                View my Resume
+            </a>
+        </section>
 
-        <div class="project-item">
-            <img src="project3.jpg" alt="Project Image">
-            <div class="project-info">
-                <h3>Book Recommedation System</h3>
-                <p>Short description goes here...</p>
-                <a href="#" target="_blank">View Project →</a>
+        <!-- 2. About Section -->
+        <section id="about" class="pt-8">
+            <h2 class="text-3xl font-bold border-b-2 border-accent/50 pb-2 mb-6 text-text-light">About Me</h2>
+            <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl">
+                <p class="text-lg leading-relaxed text-text-muted">
+                    As a recent graduate, I am passionate about **extracting insights from complex datasets** and transforming them into actionable strategies. My academic career provided me with a strong foundation in **Statistical Analysis** and **Data Modeling**, and I thrive on solving real-world classification and prediction problems. I specialize in **Python (Pandas, Scikit-learn)** and **SQL**, and I'm currently seeking an entry-level role where I can apply my skills in data science and machine learning.
+                </p>
             </div>
+        </section>
+
+        <!-- 3. Skills Section (Updated for Data Science Focus) -->
+        <section id="skills" class="pt-8">
+            <h2 class="text-3xl font-bold border-b-2 border-accent/50 pb-2 mb-6 text-text-light">Technical Skills</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Skill Group 1: Languages & Core Libraries -->
+                <div class="bg-secondary-bg p-5 rounded-2xl shadow-xl hover:bg-secondary-bg/70 transition duration-300">
+                    <h3 class="text-xl font-semibold text-accent mb-3">Languages & Libraries</h3>
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Python (Pandas, NumPy, Django&Flask)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> SQL (MySQL)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> AWS(Cloud Computing)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Data Science
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Java(Basics)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 2: Machine Learning & NLP -->
+                <div class="bg-secondary-bg p-5 rounded-2xl shadow-xl hover:bg-secondary-bg/70 transition duration-300">
+                    <h3 class="text-xl font-semibold text-accent mb-3">ML & Algorithms</h3>
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Scikit-learn
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Deep Learning (CNN, RNN)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Natural Language Processing (NLP)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Classification & Regression
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 3: Visualization & Tools -->
+                <div class="bg-secondary-bg p-5 rounded-2xl shadow-xl hover:bg-secondary-bg/70 transition duration-300">
+                    <h3 class="text-xl font-semibold text-accent mb-3">Visualization & Tools</h3>
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Matplotlib / Seaborn
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Tableau / Power BI
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Jupyter Notebooks
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Git / GitHub
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 4: Cloud & Deployment -->
+                <div class="bg-secondary-bg p-5 rounded-2xl shadow-xl hover:bg-secondary-bg/70 transition duration-300">
+                    <h3 class="text-xl font-semibold text-accent mb-3">Cloud & Deployment</h3>
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> AWS (EC2, S3)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Flask / Streamlit
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-green-400">&bull;</span> Big Data Concepts
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section (Updated with user's projects) -->
+        <section id="projects" class="pt-8">
+            <h2 class="text-3xl font-bold border-b-2 border-accent/50 pb-2 mb-6 text-text-light">Featured Projects</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- Project Card 1: Resume Classification -->
+                <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl hover:shadow-accent/30 transition duration-300">
+                    <h3 class="text-2xl font-bold text-accent mb-2">Resume Classification Engine</h3>
+                    <p class="text-text-muted mb-4">An NLP model designed to automatically categorize resumes based on skills and experience.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">NLP</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Classification</span>
+                    </div>
+                    <p class="text-text-light mb-4 text-sm">
+                        Developed a text vectorization pipeline (TF-IDF) and trained a **Machine Learning classifier** (e.g., SVM or Naive Bayes) to accurately match candidates to over 10 job categories. Demonstrated skills in data cleaning and model evaluation (F1-score analysis).
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/vamsiveduruparthi/Resume_Classification" target="_blank" class="text-accent hover:underline flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                            GitHub Repo
+                        </a>
+                        <!-- UPDATED: Replaced # with the GitHub link for fallback/demo -->
+                        <a href="https://github.com/vamsiveduruparthi/Resume_Classification#readme" target="_blank" class="text-accent hover:underline flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            View Analysis
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Book Recommendation System -->
+                <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl hover:shadow-accent/30 transition duration-300">
+                    <h3 class="text-2xl font-bold text-accent mb-2">Personalized Book Recommendation System</h3>
+                    <p class="text-text-muted mb-4">A system that suggests new reading material based on user history and similarities.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Collaborative Filtering</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Pandas</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Data Analysis</span>
+                    </div>
+                    <p class="text-text-light mb-4 text-sm">
+                        Implemented a **Collaborative Filtering algorithm** to generate top-N recommendations. The project focused on extensive data cleaning, user profiling, and evaluation using metrics like Recall and Precision to measure the system's effectiveness.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/book-recommender" target="_blank" class="text-accent hover:underline flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                            GitHub Repo
+                        </a>
+                        <!-- REMOVED Live Demo link here, as it was a placeholder. Re-add when you have a live link or a dedicated report link. -->
+                    </div>
+                </div>
+                
+                <!-- Project Card 3: Alzheimer Disease Detection -->
+                <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl hover:shadow-accent/30 transition duration-300">
+                    <h3 class="text-2xl font-bold text-accent mb-2">Deep Learning for Alzheimer's Detection</h3>
+                    <p class="text-text-muted mb-4">A high-impact project using medical imaging to aid in the early diagnosis of Alzheimer's disease.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Deep Learning</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">CNN</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">TensorFlow</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Medical Imaging</span>
+                    </div>
+                    <p class="text-text-light mb-4 text-sm">
+                        Designed and trained a Convolutional Neural Network (**CNN**) to classify MRI scans into different stages of Alzheimer's progression. Highlighted proficiency in image preprocessing, handling class imbalance, and generating predictive models with high specificity and sensitivity for critical applications.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/alzheimer-detection" target="_blank" class="text-accent hover:underline flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                            GitHub Repo
+                        </a>
+                        <!-- REMOVED Live Demo link here, as it was a placeholder. Re-add when you have a live link or a dedicated report link. -->
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="https://github.com/vamsiveduruparthi" target="_blank" class="inline-block bg-text-light text-primary-bg font-semibold py-3 px-8 rounded-xl hover:bg-gray-300 transition duration-300">
+                    View All Code on GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- 5. Education Section -->
+        <section id="education" class="pt-8">
+            <h2 class="text-3xl font-bold border-b-2 border-accent/50 pb-2 mb-6 text-text-light">Education</h2>
+            
+            <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                    <h3 class="text-xl font-semibold text-text-light">Bachelor of Science in Computer Science</h3>
+                    <span class="text-sm text-text-muted">August 2020 – May 2024</span>
+                </div>
+                <p class="text-accent font-medium mb-1">Lendi Institute of Engineering And Technology (LIET)</p>
+                <p class="text-sm text-text-muted">GPA: 6.52/10.0</p>
+                <p class="text-sm text-text-muted mt-2">Relevant Coursework: Database Systems, Operating Systems, Software Engineering.</p>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="pt-8">
+            <h2 class="text-3xl font-bold border-b-2 border-accent/50 pb-2 mb-6 text-text-light">Get In Touch</h2>
+            
+            <div class="bg-secondary-bg p-6 rounded-2xl shadow-xl space-y-4">
+                <p class="text-lg text-text-muted">
+                    I'm currently seeking my first full-time role and would love to discuss how my skills can benefit your team.
+                </p>
+
+                <!-- ADD RESUME DOWNLOAD LINK HERE -->
+                <a href="VamsiPrakash_Resume2.pdf" target="_blank" class="inline-block bg-green-600 text-white font-semibold py-2 px-6 rounded-xl shadow-lg hover:bg-green-700 transition duration-300">
+                    Download Full Resume (PDF)
+                </a>
+                
+                <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8 pt-4">
+                    <!-- Email CTA -->
+                    <a href="mailto:vamsiveduruparthi.1703@gmail.com" class="flex items-center text-text-light hover:text-accent transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        vamsiveduruparthi.1703@gmail.com
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/vamsiveduruparthi1703/" target="_blank" class="flex items-center text-text-light hover:text-accent transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.565-4 0v5.604h-3v-11h3v1.765c1.396-2.423 7-2.355 7 3.559v5.676z"/>
+                        </svg>
+                        LinkedIn Profile
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/vamsiveduruparthi" target="_blank" class="flex items-center text-text-light hover:text-accent transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.805 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.743.082-.729.082-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.836 2.809 1.305 3.492.998.108-.77.419-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.468-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23-.957.266-1.983.399-3.004.399-1.021 0-2.047-.133-3.004-.399 2.293-1.552 3.301-1.23 3.301-1.23.653 1.652.242 2.873.118 3.176.768.84 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.583 8.2-6.088 8.2-11.388 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-secondary-bg py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-muted">
+            &copy; 2025 VamsiPrakash. Built with Tailwind CSS.
         </div>
+    </footer>
 
-    </div>
-</section>
-
-
-    <div class="project-card">
-        <h3>Resume Classification</h3>
-        <p>Short description of project...</p>
-        <a href="https://github.com/vamsiveduruparthi/Resume_Classification" target="_blank">View Project →</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Book Recommedation System</h3>
-        <p>Short description of project...</p>
-        <a href="#" target="_blank">View Project →</a>
-    </div>
-
-</section>
-
-<section id="contact" class="section fade-in">
-    <h2>Contact</h2>
-    <p>Email: vamsiveduruparthi.1703@gmail.com</p>
-    <p><a href="#">https://www.linkedin.com/in/vamsiveduruparthi1703/</a></p>
-    <p><a href="#">https://github.com/vamsiveduruparthi</a></p>
-</section>
-
-
-<script src="script.js"></script>
+    <!-- Small script for smooth scrolling links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
